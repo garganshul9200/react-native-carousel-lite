@@ -4,7 +4,6 @@
 
 [![npm version](https://img.shields.io/npm/v/react-native-carousel-lite.svg)](https://www.npmjs.com/package/react-native-carousel-lite)
 [![license](https://img.shields.io/npm/l/react-native-carousel-lite.svg)](https://github.com/garganshul9200/react-native-carousel-lite/blob/main/LICENSE)
-<!-- [![Hire me](https://img.shields.io/badge/Hire%20the%20developer-Portfolio-6C5CE7?style=flat)](https://yourportfolio.com) -->
 
 **react-native-carousel-lite** is a minimal, high-performance carousel for React Native with no third-party dependencies. Use it as a lightweight alternative to heavier carousel libraries when you need a simple, fast slider or image carousel with snap scrolling, optional autoplay, and full TypeScript support.
 
@@ -206,7 +205,7 @@ Like this library? I'm available for hire. Check out my portfolio to see more of
 
 ## 📄 License
 
-MIT © [Anshul Thakur](https://github.com/garganshul9200)
+MIT © [Anshul Thakur](https://github.com/garganshul9200) 2026
 
 - **npm:** [react-native-carousel-lite](https://www.npmjs.com/package/react-native-carousel-lite)
 - **GitHub:** [garganshul9200/react-native-carousel-lite](https://github.com/garganshul9200/react-native-carousel-lite)
