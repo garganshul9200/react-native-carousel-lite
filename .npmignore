@@ -1,0 +1,10 @@
+node_modules
+*.log
+.DS_Store
+*.tgz
+.env*
+.turbo
+coverage
+*.tsbuildinfo
+src/**/*.test.*
+src/**/*.spec.*

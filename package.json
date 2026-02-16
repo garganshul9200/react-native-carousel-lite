@@ -1,0 +1,55 @@
+{
+  "name": "react-native-carousel-lite",
+  "version": "1.0.0",
+  "description": "Lightweight, high-performance React Native carousel built with core components. Zero dependencies, smooth animations, and easy integration.",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "react-native": "lib/index.mjs",
+  "source": "src/index.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-carousel",
+    "react-native-carousel-lite",
+    "carousel",
+    "slider",
+    "react-native-slider",
+    "flatlist-carousel",
+    "lightweight-carousel",
+    "fast-carousel",
+    "zero-dependency",
+    "react-native-ui",
+    "react-native-component",
+    "mobile-carousel",
+    "snap-carousel",
+    "scroll-carousel",
+    "pagination-carousel",
+    "infinite-carousel",
+    "autoplay-carousel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garganshul9200/react-native-carousel-lite"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
