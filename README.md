@@ -24,10 +24,14 @@
 
 ---
 
+![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+
 ## ✨ Preview
 
-<!-- Add GIF here - use alt text: "react-native-carousel-lite horizontal carousel demo on iOS and Android" -->
-<!-- This is VERY important for adoption -->
+![react-native-carousel-lite horizontal carousel demo on iOS and Android](assets/carousel-demo.png)
+
+![react-native-carousel-lite carousel with image slides and pagination](assets/carousel-demo2.png)
 
 ---
 
@@ -86,7 +90,9 @@ const data = [{ id: '1', title: 'Slide 1' }, { id: '2', title: 'Slide 2' }];
   data={data}
   renderItem={({ item }) => <Text>{item.title}</Text>}
   keyExtractor={(item) => item.id}
+  itemsPerPage={2}
   autoPlay
+  autoPlayInterval={3000}
   loop
   onIndexChange={(index) => console.log(index)}
 />
