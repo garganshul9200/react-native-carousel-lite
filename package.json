@@ -39,7 +39,7 @@
     "type": "git",
     "url": "https://github.com/garganshul9200/react-native-carousel-lite"
   },
-  "author": "",
+  "author": "Anshul Thakur",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=17.0.0",
