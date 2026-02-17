@@ -9,6 +9,8 @@ export type RenderItemParams<T> = {
 export type RenderDotParams = {
   index: number;
   isActive: boolean;
+  /** Call to scroll to this page. Use in custom renderDot for tap-to-page. */
+  onPress: () => void;
 };
 
 export type CarouselProps<T> = {
@@ -46,7 +48,7 @@ export type CarouselProps<T> = {
   pageStyle?: StyleProp<ViewStyle>;
   /** Show pagination dots. Default: true */
   showDots?: boolean;
-  /** Custom dot renderer: (index, isActive) => ReactNode. Overrides dot styles when set */
+  /** Custom dot renderer. Receives index, isActive, and onPress (tap to go to page). Overrides dot styles when set */
   renderDot?: (params: RenderDotParams) => ReactNode;
   /** Dots container style */
   dotsContainerStyle?: StyleProp<ViewStyle>;

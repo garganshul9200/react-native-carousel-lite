@@ -50,6 +50,7 @@
 - **Fully customizable** — Styles and custom dot renderer for pagination
 - **Controlled or uncontrolled** — `index` / `onIndexChange` or internal state
 - **Ref API** — `scrollToIndex`, `scrollToNext`, `scrollToPrev`, `getCurrentIndex`
+- **Tappable pagination dots** — Tap a dot to jump to that page; custom `renderDot` receives `onPress`
 - **Accessibility** — Configurable labels and roles
 - **Windowed rendering** — Optional `windowSize` for large lists
 
@@ -136,8 +137,8 @@ Use `vertical` for vertical scrolling and `renderDot` for custom pagination UI.
   data={data}
   vertical
   renderItem={...}
-  renderDot={({ index, isActive }) => (
-    <View style={[styles.dot, isActive && styles.dotActive]} />
+  renderDot={({ index, isActive, onPress }) => (
+    <Pressable onPress={onPress} style={[styles.dot, isActive && styles.dotActive]} />
   )}
 />
 ```
@@ -165,7 +166,7 @@ Use `vertical` for vertical scrolling and `renderDot` for custom pagination UI.
 | `contentContainerStyle` | `ViewStyle` | — | Style for the ScrollView content container. |
 | `pageStyle` | `ViewStyle` | — | Style for each page wrapper. |
 | `showDots` | `boolean` | `true` | Whether to show pagination dots. |
-| `renderDot` | `({ index, isActive }) => ReactNode` | — | Custom dot renderer; overrides default dot styles when set. |
+| `renderDot` | `({ index, isActive, onPress }) => ReactNode` | — | Custom dot renderer; receives `onPress` to scroll to that page. Overrides default dot styles when set. |
 | `dotsContainerStyle` | `ViewStyle` | — | Style for the dots container. |
 | `dotStyle` | `ViewStyle` | — | Style for inactive dots. |
 | `activeDotStyle` | `ViewStyle` | — | Style for the active dot. |

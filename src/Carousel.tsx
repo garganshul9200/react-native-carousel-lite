@@ -11,6 +11,7 @@ import {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Pressable,
   ScrollView,
   View,
 } from 'react-native';
@@ -268,6 +269,17 @@ function CarouselInner<T>(
   }, [pageSize, initialExtendedIndex, scrollToExtended]);
 
   const extendedCenter = extendedFromLogical(activeIndex);
+
+  const goToPage = useCallback(
+    (pageIndex: number) => {
+      const clamped = Math.max(0, Math.min(pageIndex, pageCount - 1));
+      scrollToLogical(clamped, true);
+      setActiveIndex(clamped);
+      onIndexChange?.(clamped);
+    },
+    [pageCount, scrollToLogical, setActiveIndex, onIndexChange]
+  );
+
   const shouldRenderPage = useCallback(
     (extendedIndex: number): boolean => {
       if (windowSize <= 0) return true;
@@ -339,14 +351,20 @@ function CarouselInner<T>(
           {pages.map((_, i) =>
             renderDot ? (
               <React.Fragment key={i}>
-                {renderDot({ index: i, isActive: i === activeIndex })}
+                {renderDot({
+                  index: i,
+                  isActive: i === activeIndex,
+                  onPress: () => goToPage(i),
+                })}
               </React.Fragment>
             ) : (
-              <View
+              <Pressable
                 key={i}
+                onPress={() => goToPage(i)}
                 style={[dotStyle, i === activeIndex && activeDotStyle]}
                 accessibilityState={{ selected: i === activeIndex }}
                 accessibilityLabel={`Page ${i + 1} of ${pageCount}`}
+                accessibilityRole="button"
               />
             )
           )}
