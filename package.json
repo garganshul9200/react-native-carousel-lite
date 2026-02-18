@@ -1,6 +1,6 @@
 {
   "name": "react-native-carousel-lite",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Lightweight, high-performance React Native carousel built with core components. Zero dependencies, smooth animations, and easy integration.",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
