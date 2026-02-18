@@ -6,7 +6,8 @@ export default defineConfig({
   dts: true,
   outDir: 'lib',
   splitting: false,
-  sourcemap: true,
+  sourcemap: false,
+  minify: true,
   clean: true,
   external: ['react', 'react-native'],
   esbuildOptions(options) {
